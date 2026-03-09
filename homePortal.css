@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(182, 151, 65);
+  color: black;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button {
+  background-color: rgb(165, 48, 48);
+  color: rgb(14, 11, 11);
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 
+}
+.isConfirmed {
+  background-color: rgb(48, 165, 68);
+  color: rgb(255, 255, 255);
+}
+.is99 {
+  background-color: rgb(180, 167, 46);
+  color: rgb(80, 77, 77);
+}

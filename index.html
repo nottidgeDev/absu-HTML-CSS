@@ -41,16 +41,40 @@
  <div class="container2">
   <p>LOG IN TO YOUR ACCOUNT</p>
   <hr class="hrzntal line">
-  <form action="">
+  <form action="homePortal.html" id="myForm" onsubmit="return validateEntry()">
     <label for="UN">USER NAME</label>
-    <input type="text" placeholder="2016/1111111" name="UN" id="UN" required> 
+    <input type="text" placeholder="2024/1111111" name="UN" id="UN"> 
     <label for="psw">PASSWORD</label>
-    <input type="password" placeholder="*******" name="psw" id="psw" required> 
+    <input type="password" placeholder="*******" name="psw" id="psw">
+    
+    <button class="btn js-submit-button" type="submit">LOGIN</button>
   </form>
 
-    <button class="btn" type="submit">LOGIN</button>
  </div>
 </div>
 
+
+<script>
+  function validateEntry () {
+    if (document.getElementById('UN').value === '') {
+      alert('please provide your name');
+      document.getElementById('UN').focus();
+      return false;
+
+    } else if (document.getElementById('psw').value === '') {
+      alert('please provide your password');
+      document.getElementById('psw').focus();
+      return false;
+
+    } else {document.querySelector('.js-submit-button')
+           .innerHTML = 'LOADING....';
+          setTimeout(() => {
+            document.getElementById('myForm').submit();
+          }, 3000);
+
+          return false;
+      }   
+    }
+</script>
 </body>
 </html>

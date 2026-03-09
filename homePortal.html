@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logged in</title>
+  <link rel="stylesheet" href="homePortal.css">
+</head>
+<body>
+  <P>Welcome to the home page</p>
+  <P>proceed for further registration</p>
+  <button class=" button js-btn">ClickMe</button>
+
+  <script>
+   const buttonElement = document.querySelector('.js-btn');
+   buttonElement.addEventListener('click', () => {
+    if (buttonElement.innerHTML === 'ClickMe') {
+      buttonElement.innerHTML = 'please hold';
+      setTimeout(() => {
+        buttonElement.classList.add('is99');
+        buttonElement.innerHTML = '99...';
+      }, 2000);
+      setTimeout(() => {
+        buttonElement.classList.remove('is99');
+        buttonElement.classList.add('isConfirmed');
+        buttonElement.innerHTML = 'CONFIRMED';
+      }, 3000);
+    } else {
+      buttonElement.classList.remove('isConfirmed');
+      buttonElement.innerHTML = 'ClickMe';
+    }
+   });
+   
+  </script>
+</body>
+</html>
